@@ -1,6 +1,6 @@
 # Feeder-Bot
  This is a tool called **feeder-bot** for automating updates of RSS feeds to your platform (receiver). The workflow of feeder-bot is illustrated as follows.
-![](images/feeder-bot-flow.pdf)
+![](images/feeder-bot-flow.png)
 
 ### Quick Start
 
