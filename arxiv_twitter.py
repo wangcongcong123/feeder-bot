@@ -6,13 +6,8 @@ import tweepy
 import atoma
 import time
 from datetime import datetime
-# twitter api data (replace yours here given are placeholder)
-# if you have not yet, go for applying at: https://developer.twitter.com/
+from twitter_private import *
 
-TWITTER_KEY="1212888499461877760-suDEPkDokc8pmD7bvVu0XFAqM7N0Gs"
-TWITTER_SECRET="fUDag14HkwVwOKJC0dK1H6PPTEkbQtNXcfHDr5wI61gaF"
-TWITTER_APP_KEY="V7mCVeQMcmFgvQMSStqFirPQ8"
-TWITTER_APP_SECRET="lnRvZeTbqTUAMWfx6VeM6XC9o8I5oalqIOw5lrIeUXEqm3afUZ"
 
 #### THIS WILL BE args set up when "python arxiv_bot.py"
 ARXIV_QUERY = "bert+OR+nlp" # the query for automatic retreival of latest papers from arxiv, the format refers to: https://arxiv.org/help/api
