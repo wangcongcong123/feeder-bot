@@ -106,6 +106,7 @@ docker run -v $(pwd)/twitter_keys.txt:/feeder-bot/twitter_keys.txt feeder-bot:ar
 ### TODO
 - Support more RSS feeds such as BBC News, Weather, etc.
 - Support more receivers such as inbox, website, etc.
+- Listen multiple feeds at the same time.
 
 ### Updates
 
