@@ -110,12 +110,13 @@ docker run -v $(pwd)/twitter_keys.txt:/feeder-bot/twitter_keys.txt feeder-bot:ar
 
 ### Updates
 
-- 13/03/2020: Publish the first version of feeder-bot that can listen to updates from arXiv and automatically forward them to Twitter if updates found. You just need to specify some arguments such as arxiv_query and hashtags_prepend to run the bot !
+- 13/03/2020: Publish the first version of feeder-bot that can listen to updates from arXiv and automatically forward them to Twitter if updates found. You just need to specify some arguments such as arxiv_query and hashtags_prepend to run the bot!
 
 
 ### Contributions
 - Now the project is just in early stage, so feedback and pull requests are welcome.
 
 
-
+### Contact
+- wangcongcongcc@gmail.com
 
