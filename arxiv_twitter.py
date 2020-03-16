@@ -83,7 +83,7 @@ def main():
 		# if next_timestamp > last_timestamp. that means update found and thus call Twitter API to update status
 		if (next_timestamp-last_timestamp)>0.0:
 			# post a tweet on Twitter
-			post_content=" ".join(HASHTAGS2PREPEND)+' new arxiv '+ ARXIV_QUERY +' related paper: '+data_obj.+entries[0].id_'\n'+data_obj.entries[0].title.value+"."
+			post_content=" ".join(HASHTAGS2PREPEND)+' new arxiv '+ ARXIV_QUERY +' related paper: '+data_obj.entries[0].id_+'\n'+data_obj.entries[0].title.value+"."
 			if len(post_content)>280:
 			    # twitter allows a tweet up to 280 characters
 			    post_content=post_content[:277]+"..."
