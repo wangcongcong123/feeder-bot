@@ -104,6 +104,7 @@ docker run -v $(pwd)/twitter_keys.txt:/feeder-bot/twitter_keys.txt feeder-bot:ar
 - [How to listen to arXiv based on keywords and post identified updates to Twitter?](https://wangcongcong123.github.io./How-to-listen-to-arXiv-based-on-keywords-and-post-identified-updates-to-Twitter/)
 
 ### TODO
+- Expand keyword based query to semantic based query using NLP techniques?
 - Support more RSS feeds such as BBC News, Weather, etc.
 - Support more receivers such as inbox, website, etc.
 - Listen multiple feeds at the same time.
