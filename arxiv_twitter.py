@@ -70,13 +70,12 @@ def main():
 
 	import urllib.request
 	# for details of arxiv api, see: https://arxiv.org/help/api/user-manual#title_id_published_updated
-	url = 'http://export.arxiv.org/api/query?search_query=all:'+ARXIV_QUERY+'&start=0&max_results=1&sortBy=lastUpdatedDate&sortOrder=descending'
-	data = urllib.request.urlopen(url).read()
-
 	last_timestamp=datetime.timestamp(datetime.now())-args.days_since*3600*24
 
 	logger.info("Start listening with arguments: "+str(args))
 	while True:
+		url = 'http://export.arxiv.org/api/query?search_query=all:'+ARXIV_QUERY+'&start=0&max_results=1&sortBy=lastUpdatedDate&sortOrder=descending'
+		data = urllib.request.urlopen(url).read()
 		data_obj=atoma.parse_atom_bytes(data)
 		next_timestamp=datetime.timestamp(data_obj.updated)
 		logger.info("Get a paper from arXiv updated at " + str(data_obj.updated)+": "+data_obj.entries[0].id_)
@@ -104,7 +103,7 @@ def main():
 		else:
 			logger.info("Start sleeping given days_since =",str(args.days_since),"days")
 			time.sleep(REQUEST_INTERVAL)
-			logger.info("No update in the last "+str(REQUEST_INTERVAL)+" seconds")
+			# logger.info("No update in the last "+str(REQUEST_INTERVAL)+" seconds")
 
 if __name__ == "__main__":
     main()
