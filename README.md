@@ -6,11 +6,12 @@
 
 Here using arXiv as the RSS feed and Twitter as the receiver, for example.
 
-#### Direct Download
+#### Direct Download and Requirements
 
 ``````shell
 git clone https://github.com/wangcongcong123/feeder-bot.git
 cd feeder-bot
+pip install -r requirements.txt
 vim twitter_keys.txt
 ``````
 The content of twitter_keys.txt should be as follows.
@@ -19,12 +20,6 @@ The content of twitter_keys.txt should be as follows.
 	TWITTER_SECRET=<YOURS>
 	TWITTER_APP_KEY=<YOURS>
 	TWITTER_APP_SECRET=<YOURS>
-
-##### Requirements
-
-``````shell
-pip install -r requirements.txt
-``````
 
 ##### Run [arxiv_twitter.py](/arxiv_twitter.py)
 
@@ -83,12 +78,12 @@ The content of twitter_keys.txt should be as follows.
 ##### Run in Container
 
 ``````shell
-docker run -v $(pwd)/twitter_keys.txt:/feeder-bot/twitter_keys.txt feeder-bot:arxiv_twitter arxiv_twitter.py -r 3600 -q "bert+OR+nlp" -d 10
+docker run -v $(pwd)/twitter_keys.txt:/feeder-bot/twitter_keys.txt a1243324336/feeder-bot:arxiv_twitter arxiv_twitter.py -r 3600 -q "bert+OR+nlp" -d 10
 ``````
 or
 
 ``````shell
-docker run -v $(pwd)/twitter_keys.txt:/feeder-bot/twitter_keys.txt feeder-bot:arxiv_twitter arxiv_twitter.py --arxiv_query "COVID-19"  --hashtags_prepend "#COVID-19"
+docker run -v $(pwd)/twitter_keys.txt:/feeder-bot/twitter_keys.txt a1243324336/feeder-bot:arxiv_twitter arxiv_twitter.py --arxiv_query "COVID-19"  --hashtags_prepend "#COVID-19"
 ``````
 
 ### Support of RSS feeds so far
